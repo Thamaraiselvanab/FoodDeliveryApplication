@@ -1,0 +1,260 @@
+@charset "UTF-8";
+
+/* =====================
+   COD PAGE
+===================== */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cod-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.cod-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+
+/* COD Card */
+.cod-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+
+  /* --- overlap fix --- */
+  display: block !important;
+  position: static !important;
+  float: none !important;
+  clear: both !important;
+
+  width: 100% !important;
+  margin-bottom: 20px !important;
+  box-sizing: border-box;
+}
+
+
+
+.cod-item {
+  position: relative !important;
+}
+
+
+/* COD Item */
+.cod-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cod-item:last-child {
+  border-bottom: none;
+}
+
+/* Item Info */
+.item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-name {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.item-price {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Quantity Control */
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: #fc8019;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.qty-btn:hover {
+  background-color: #e86f10;
+}
+
+.qty-value {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Total Section */
+.cod-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 2px dashed #ddd;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.total-price {
+  color: #0f8a3c;
+}
+
+/* Place Order Button */
+.place-order-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #0f8a3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.place-order-btn:hover {
+  background-color: #0c6f30;
+}
+
+/* =====================
+   EMPTY COD
+===================== */
+
+.empty-cod {
+  background: white;
+  border-radius: 10px;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.empty-cod h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.empty-cod p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.add-item-btn {
+  padding: 12px 20px;
+  background-color: #fc8019;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.remove-btn {
+  background: transparent;
+  border: none;
+  color: #d32f2f;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.remove-btn:hover {
+  text-decoration: underline;
+}
+
+
+.add-item-btn:hover {
+  background-color: #e86f10;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 600px) {
+  .cod-container {
+    margin: 20px;
+  }
+}
+/* =====================
+   CART TOTAL & ACTIONS
+===================== */
+
+.total {
+  margin-top: 20px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: right;
+  color: #333;
+  border-top: 2px dashed #ddd;
+}
+
+.add-more-items {
+  margin-top: 15px;
+  text-align: right;
+}
+
+.add-more-items-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #fc8019;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.add-more-items-btn:hover {
+  background-color: #e86f10;
+}
+/* =====================
+   CHECKOUT BUTTON
+===================== */
+
+.checkout-section {
+  margin-top: 12px;
+  text-align: right;
+}
+
+.proceed-to-checkout-btn {
+  padding: 12px 22px;
+  background-color: #0f8a3c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  background-color: #0c6f30;
+}
+

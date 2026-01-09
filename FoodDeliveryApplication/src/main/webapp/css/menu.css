@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* =====================
+   MENU PAGE
+===================== */
+
+/* Menu Grid */
+.menu-container {
+  padding: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Menu Card */
+.menu-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Food Image */
+.menu-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Menu Info */
+.menu-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Menu Name */
+.menu-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Description */
+.menu-description {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+  min-height: 40px;
+}
+
+/* Price & Rating */
+.menu-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.menu-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.menu-rating {
+  font-size: 0.9rem;
+  color: #0f8a3c;
+  font-weight: 600;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background-color: #fc8019;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #e86f10;
+  transform: scale(1.02);
+}
+
+/* =====================
+   RESPONSIVE MENU
+===================== */
+@media (max-width: 768px) {
+  .menu-card img {
+    height: 180px;
+  }
+}
