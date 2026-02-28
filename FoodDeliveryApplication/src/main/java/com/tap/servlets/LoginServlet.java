@@ -30,13 +30,13 @@ public class LoginServlet extends HttpServlet {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
 
-        // Get remaining attempts from session
+        
         Integer attemptsLeft = (Integer) session.getAttribute("loginAttempts");
         if (attemptsLeft == null) {
             attemptsLeft = MAX_ATTEMPTS;
         }
 
-        // If attempts exhausted
+        
         if (attemptsLeft <= 0) {
             req.setAttribute("loginBlocked", true);
             resp.sendRedirect("register.jsp");
@@ -47,15 +47,15 @@ public class LoginServlet extends HttpServlet {
         User user = authenticateUser(email, password);
 
         if (user != null) {
-            // ✅ Successful login
+            
             session.setAttribute("user", user);
             session.removeAttribute("loginAttempts");
 
-            resp.sendRedirect("Restaurant"); // or home page
+            resp.sendRedirect("Restaurant"); 
             return;
         }
 
-        // ❌ Invalid credentials
+       
         attemptsLeft--;
         session.setAttribute("loginAttempts", attemptsLeft);
 
@@ -70,7 +70,7 @@ public class LoginServlet extends HttpServlet {
         forwardToLogin(req, resp);
     }
 
-    // ---------------- HELPER METHODS ----------------
+    
 
     private void forwardToLogin(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {

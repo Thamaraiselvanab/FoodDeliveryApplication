@@ -111,7 +111,7 @@
     <div class="empty-cod">
       <h3>No items in your cart</h3>
       <a href="Restaurant" class="add-item-btn">
-  Add Items to COD
+  Add Items to Cart
 </a>
 
     </div>

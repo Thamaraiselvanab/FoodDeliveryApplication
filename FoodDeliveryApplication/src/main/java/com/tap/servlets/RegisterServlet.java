@@ -19,7 +19,7 @@ public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
-        // 1. Read form data
+        
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         String email    = req.getParameter("email");
@@ -29,28 +29,28 @@ public class RegisterServlet extends HttpServlet {
 
         UserDAO userDAOImpl = new UserDAOImpl();
 
-        // 2. Check if email already exists
+        
         User existingUser = userDAOImpl.getUserByEmail(email);
 
         if (existingUser != null) {
-            // Email already registered
+            
         	resp.sendRedirect("login.jsp");
             return;
         }
 
-        // 3. Create new User object
+       
         User user = new User();
         user.setUserName(username);
-        user.setPassword(password); // plain text for now (basic project)
+        user.setPassword(password); 
         user.setEmail(email);
         user.setAddress(address);
         user.setPhoneNumber(phone);
         user.setRole(role);
 
-        // 4. Insert user
+        
         userDAOImpl.addUser(user);
 
-        // 5. Redirect to login page
+       
         resp.sendRedirect("login.jsp");
     }
 }

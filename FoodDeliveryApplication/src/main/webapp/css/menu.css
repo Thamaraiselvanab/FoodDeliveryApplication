@@ -1,106 +1,115 @@
 @charset "UTF-8";
 /* =====================
-   MENU PAGE
+   GLOBAL
 ===================== */
-
-/* Menu Grid */
-.menu-container {
-  padding: 25px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 25px;
+/* =====================
+   GLOBAL
+===================== */
+/* =====================
+   GLOBAL
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Menu Card */
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fff6ec, #fdf1ff);
+  color: #1f2937;
+}
+
+/* =====================
+   MENU GRID (BIGGER)
+===================== */
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 28px 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 36px;
+}
+
+/* =====================
+   MENU CARD (BIGGER)
+===================== */
 .menu-card {
-  background: white;
-  border-radius: 10px;
+  background: #ffffff;
+  border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .menu-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.18);
 }
 
-/* Food Image */
+/* Image */
 .menu-card img {
   width: 100%;
-  height: 200px;
+  height: 230px; /* BIGGER IMAGE */
   object-fit: cover;
 }
 
-/* Menu Info */
+/* =====================
+   CARD CONTENT
+===================== */
 .menu-info {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  padding: 22px;
 }
 
-/* Menu Name */
 .menu-name {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
 }
 
-/* Description */
 .menu-description {
   font-size: 0.9rem;
-  color: #666;
-  line-height: 1.4;
-  min-height: 40px;
+  color: #4b5563;
+  margin-bottom: 14px;
 }
 
-/* Price & Rating */
+/* =====================
+   PRICE & RATING
+===================== */
 .menu-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 5px;
+  margin-bottom: 18px;
 }
 
 .menu-price {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #333;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ff3d81;
 }
 
 .menu-rating {
   font-size: 0.9rem;
-  color: #0f8a3c;
-  font-weight: 600;
-}
-
-/* Add to Cart Button */
-.add-to-cart-btn {
-  margin-top: 10px;
-  padding: 10px;
-  border: none;
-  background-color: #fc8019;
-  color: white;
-  font-size: 0.95rem;
-  font-weight: 600;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-.add-to-cart-btn:hover {
-  background-color: #e86f10;
-  transform: scale(1.02);
+  color: #374151;
 }
 
 /* =====================
-   RESPONSIVE MENU
+   ADD TO CART BUTTON (COLORED)
 ===================== */
-@media (max-width: 768px) {
-  .menu-card img {
-    height: 180px;
-  }
+.menu-card form input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff6a00, #ff3d81);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 12px 26px rgba(255, 61, 129, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.menu-card form input[type="submit"]:
